@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Cerberus</title>
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Cerberus</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="file:///Users/williamsanefski/Documents/public/Upload.html">Surevey</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="file:///Users/williamsanefski/Documents/public/Upload.html">Analysis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="file:///Users/williamsanefski/Documents/public/index.html">Sign-Out</a>
+      </li>
+  </div>
+</nav>
+
+ <form>
+  <div id = "uploader" class="form-group">
+    <label class ="upload-group" for="File-Upload"> Input a file </label>
+    <input type="file" accept= ".txt" class="form-control-file" id="File">
+  </div>
+   <button onclick ="Upload()" id= "Upload-btn" type="submit" class="btn btn-secondary">Upload</button>
+   <button onclick ="SendMail()" id= "Email-btn" type="submit" class="btn btn-primary">Email</button>
+</form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhaxl9T9kYvRE80X-JjD1QQ9PuYzyamBo",
+    authDomain: "senior-project-cer.firebaseapp.com",
+    databaseURL: "https://senior-project-cer.firebaseio.com",
+    projectId: "senior-project-cer",
+    storageBucket: "senior-project-cer.appspot.com",
+    messagingSenderId: "801054851116"
+  };
+  firebase.initializeApp(config);
+</script>
+    
+    <script type="text/javascript" src="Upload.js"> </script>
+    <script type="text/php" src="Email.js"></script>
+  </body>
+</html>
