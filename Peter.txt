@@ -4,6 +4,12 @@
 	~b~ C. 3
 	~b~ D none
 
+2. How many Cars do you own?
+	~b~ A. 1
+	~b~ B. 2
+	~b~ C. 3
+	~b~ D none
 
 
-						/~s~/
+
+						~s~

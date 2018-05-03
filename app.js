@@ -5,7 +5,7 @@ var btnLogin = document.getElementById("btnLogin");
 var btnSignUp = document.getElementById("btnSignUp");
 var btnLogout = document.getElementById("btnLogout");
 var guestUser = document.getElementById("anonymous");
-
+var userId = firebase.auth().currentUser;
 
 //initial state of the website (Signup section)
 $(document).ready(function(){
@@ -15,6 +15,7 @@ $(document).ready(function(){
   $("#File-Table").hide();
   $("#Log-btn").hide();
   $("#Submit-Email").hide();
+  $("#FileNav").hide();
 
 })
 
@@ -44,11 +45,13 @@ function login(){
   firebase.auth().onAuthStateChanged(user=>{
     if(user){
       console.log(user);
+      var userId = firebase.auth().currentUser.user;
       //window.location ="Survey.html";
         $("#Login-Page").hide();
         $("#Survey-Page").show();
         $("#Account-Page").hide();
-        $("#Log-btn").show();
+        $("#Log-btn").hide();
+        $("#FileNav").show();
 
     }
     else{
@@ -76,11 +79,23 @@ function Return(){
  $("#File-Table").hide();
  $("#Log-btn").hide();
 }
-
+function Survey(){
+  $("#Login-Page").hide();
+  $("#Survey-Page").show();
+  $("#Account-Page").hide();
+  $("#File-Table").hide();
+  $("#Log-btn").hide();
+  $("#Submit-Email").hide();
+  $("#FileNav").show();
+}
 //Sign's user out 
 function SignOut(){
-    $("#Login-Page").show();
-    $("#Survey-Page").hide();
-    $("#Account-Page").hide();
+  $("#Login-Page").show();
+  $("#Survey-Page").hide();
+  $("#Account-Page").hide();
+  $("#File-Table").hide();
+  $("#Log-btn").hide();
+  $("#Submit-Email").hide();
+  $("#FileNav").hide();
 } 
 
